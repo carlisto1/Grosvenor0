@@ -1,0 +1,204 @@
+ <div class="card-block-big table-border-style">
+        <div class="table-responsive">
+            
+            <table class="table">
+                <thead>
+                    <tr>
+                    <th>Employee ID</th>
+                    <th>employee name<th>
+                    <th>specialization<th>
+                    <th>date of birth<th>
+                    <th>place of birth<th>
+                    <th>address name<th>
+                    <th>address square<th>
+                    <th>address area<th>
+                    <th>address box<th>
+                    <th>address email<th>
+                    <th>address phone<th>
+                    <th>address Telephone<th>
+                    <th>gender type<th>
+                    <th>gender statues<th>
+
+                    <th>q_obtained<th>
+                    <th>date_obtained
+                    <th>obtained_from<th>
+                    
+                    <th>job_befor<th>
+                    <th>licence_expire<th>
+                    <th>licence_no<th>
+                    <th>last_job_info<th>
+                    <th>refrence01 name<th>
+                    <th>refrence01 phone<th>
+                    <th>refrence01 Address<th>
+                    <th>refrence01 position<th>
+                    <th>refrence1 name<th>
+                    <th>refrence1 phone<th>
+                    <th>refrence1 Address<th>
+                    <th>refrence1 relation<th>
+                    <th>refrence0 name<th>
+                    <th>refrence0 phone<th>
+                    <th>refrence0 Address<th>
+                    <th>refrence0 position<th>
+                    <th>date from0<th>
+                    <th>date to0<th>
+                    <th>job last payment0<th>
+                    <th>reason leaving0<th>
+                    <th>account name<th>
+                    <th>account no<th>
+                    <th>account info<th>
+                    <th>working shift<th>
+                    <th>working extra<th>
+                    <th>applied position<th>
+                    <th>Created Date <th>
+                    <th>Updated Date<th>
+                    <th>Updated By<th>
+
+                   
+                        
+                        <th colspan="3" class="text-center" >Operation</th>
+                        <th colspan="6" class="text-center" >Process</th>
+                        
+                    </tr>
+                </thead>
+                <tbody>
+                <?php
+
+           
+          $query = "select * from employee ;";
+          $result = mysqli_query($conn,$query);
+            while($row = mysqli_fetch_assoc($result)){
+                $employee_id=$row['employee_id'];
+                ?>
+
+                <tr>
+<td><?php echo $row['employee_id'];?><td>
+<td><?php echo $row['employee_name']?><td>
+<td><?php echo $row['specialization' ]?><td>
+<td><?php echo $row['date_of_birth' ]?><td>
+<td><?php echo $row['place_of_birth' ]?><td>
+<td><?php echo $row['address_name' ]?><td>
+<td><?php echo $row['address_square' ]?><td>
+<td><?php echo $row['address_area' ]?><td>
+<td><?php echo $row['address_box' ]?><td>
+<td><?php echo $row['address_email' ]?><td>
+<td><?php echo $row['address_phone' ]?><td>
+<td><?php echo $row['address_Telephone' ]?><td>
+<td><?php echo $row['gender_type' ]?><td>
+<td><?php echo $row['gender_statues' ]?><td>
+
+<td><?php echo $row['q_obtained' ]?><td>
+<td><?php echo $row['date_obtained' ]?><td>
+<td><?php echo $row['obtained_from']?><td>
+
+<td><?php echo $row['job_befor' ]?><td>
+<td><?php echo $row['licence_expire']?><td>
+<td><?php echo $row['licence_no' ]?><td>
+<td><?php echo $row['last_job_info' ]?><td>
+<td><?php echo $row['refrence01_name'];?><td>
+<td><?php echo $row['refrence01_phone'];?><td>
+<td><?php echo $row['refrence01_address'];?><td>
+<td><?php echo $row['refrence01_position'];?><td>
+<td><?php echo $row['refrence1_name'];?><td>
+<td><?php echo $row['refrence1_phone'];?><td>
+<td><?php echo $row['refrence1_address']?><td>
+<td><?php echo $row['refrence1_relation']?><td>
+<td><?php echo $row['refrence0_name']?><td>
+<td><?php echo $row['refrence0_phone']?><td>
+<td><?php echo $row['refrence0_address']?><td>
+<td><?php echo $row['refrence0_position']?><td>
+<td><?php echo $row['date_from0']?><td>
+<td><?php echo $row['date_to0']?><td>
+<td><?php echo $row['job_last_payment0' ]?><td>
+<td><?php echo $row['reason_leaving0' ]?><td>
+<td><?php echo $row['account_name' ]?><td>
+<td><?php echo $row['account_no' ]?><td>
+<td><?php echo $row['account_info' ]?><td>
+<td><?php echo $row['working_shift' ]?><td>
+<td><?php echo $row['working_extra' ]?><td>
+<td><?php echo $row['applied_position' ]?><td>
+<td><?php echo $row['created' ]?><td>
+<td><?php echo $row['updated' ]?><td>
+<td><?php echo $row['updated_by' ]?><td>
+
+
+              
+              <td >
+
+                <div > 
+                <?php  echo '<a class="bt btn-primary btn-sm text-light"  href="update_employee.php? employee_id='.$employee_id.'" >Confirm</a>';?>
+                </div>
+                
+    
+            </td>
+
+            <td>
+            <div >
+                <?php  echo '<a class="bt btn-danger btn-sm text-light "  data-toggle="modal" data-target="#exampleModal11"  >Delete</a> '; ?>
+                </div>
+            </td>
+
+            <td>
+            <div > 
+                <?php  echo '<a class="bt btn-primary btn-sm text-light"  href="employee_print.php? employee_id='.$employee_id.'" >Print</a>';?>
+            </div>
+
+            </td>
+
+
+
+<td >
+
+<div > 
+<?php  echo '<a class="bt btn-primary btn-sm text-light"  href="interview_employee.php? employee_id='.$employee_id.'" > Interview </a>';?>
+</div>
+
+
+</td>
+
+<td>
+<div > 
+<?php  echo '<a class="bt btn-primary btn-sm text-light"  href="document_employee.php? employee_id='.$employee_id.'" > Certificates </a>';?>
+</div>
+</td>
+
+              </tr>
+          
+          <?php
+          
+          }
+          
+          ?>
+
+                </tbody>
+            </table>
+        </div>
+
+    </div>
+</div>
+<!-- Basic table card end -->
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+address_name
+address_square
+address_area
+address_box
+address_email
+address_phone
+address_Telephone
